@@ -1,0 +1,207 @@
+@import url("https://fonts.googleapis.com/css?family=Comfortaa:400,700,300|Quattrocento");
+.about-tools ul li,
+.contact-social-icons ul a li {
+  text-align: center;
+}
+
+.centered {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.break {
+  clear: both;
+  margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+  .pull-right-sm {
+    float: right !important;
+  }
+  .pull-left-sm {
+    float: left !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .pull-right-md {
+    float: right !important;
+  }
+  .pull-left-md {
+    float: left !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .pull-right-lg {
+    float: right !important;
+  }
+  .pull-left-lg {
+    float: left !important;
+  }
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.btn:focus,
+a:focus {
+  outline: none !important;
+}
+
+.navbar {
+  height: 70px;
+  background-color: transparent;
+  background: transparent;
+  border: none;
+  color: #333;
+  z-index: 999999;
+  margin-bottom: 0;
+  border-radius: 0;
+  -webkit-transition: background-color 1s ease 0s;
+  transition: background-color 1s ease 0s;
+}
+
+@media (max-width: 768px) {
+  .navbar .container {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .navbar .container li {
+    margin-left: 15px;
+  }
+}
+
+.navbar-brand {
+  display: none;
+  margin-top: 10px;
+  color: #333;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    margin-left: 15px;
+  }
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #333;
+  font-weight: 500;
+  font-size: 1em;
+  text-transform: lowercase;
+  margin: 10px 5px 5px 5px;
+  border-radius: 5px;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:active,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #333;
+  border: 1px solid #333;
+}
+
+.navbar-default .navbar-nav > li > a:visited {
+  color: #333;
+  text-decoration: none;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  background-color: transparent;
+  color: #333;
+}
+
+.navbar-default .navbar-toggle {
+  border-color: #333;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: transparent;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  color: #333;
+  background-color: #333;
+}
+
+.navbar-default .navbar-collapse.collapse.in ul {
+  background-color: #f4de7f;
+  opacity: 0.9;
+}
+
+/* Solid class attached on scroll past first section */
+.navbar.solid {
+  background-color: #f4de7f;
+  -webkit-transition: background-color 1s ease 0s;
+  transition: background-color 1s ease 0s;
+  -webkit-box-shadow: 0 0 4px rgba(7, 55, 74, 0.2);
+          box-shadow: 0 0 4px rgba(7, 55, 74, 0.2);
+}
+
+.navbar.solid .navbar-brand {
+  display: inline-block;
+  color: #333;
+  font-weight: 1000;
+  -webkit-transition: color 1s ease 0s;
+  transition: color 1s ease 0s;
+}
+
+.navbar.solid .navbar-nav > li > a {
+  color: #333;
+  -webkit-transition: color 1s ease 0s;
+  transition: color 1s ease 0s;
+}
+
+.headline {
+  padding-top: 6.25em;
+}
+
+@media screen and (min-width: 768px) {
+  .headline {
+    padding-top: 3.75em;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .headline {
+    padding-top: 1.5625em;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .headline {
+    padding-top: 0px;
+  }
+}
+
+#scrollIcon,
+#scrollTopIcon {
+  margin-top: 200px;
+  padding: 10px;
+  font-size: 1.5em;
+  color: #07374a;
+  border: solid 2px #07374a;
+  border-radius: 50%;
+}
+
+#scrollTopIcon {
+  margin-top: 10px;
+  font-size: 1em;
+  color: #f0f0e6;
+  border-color: #f0f0e6;
+}
+
+.back-to-top {
+  display: none;
+}
+
+.back-to-top.visible {
+  display: block;
+}
+/*# sourceMappingURL=navbar-v2.css.map */

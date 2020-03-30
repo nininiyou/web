@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+     initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOG - one page</title>
+<style>
+
+body{
+margin: 0;
+background-color: rgb(197, 236, 243);
+}
+
+/* 滾軸效果 */
+html{
+    scroll-behavior: smooth;
+}
+a:visited{
+    color: black;
+}
+a:active .btn_s{
+    /* 編輯超連結的字型樣式 */
+    text-decoration:none;
+    color: white;
+
+    background-color: black;
+}
+
+#all{
+    width: 80%;
+    height: 100vh;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+}
+#boxA{
+    background-image: url("pic/p1.jpg");
+    position: relative;
+}
+
+
+#boxB{
+    background-image: url("pic/p2.jpg");
+    position: relative;
+}
+
+
+#boxC{
+    background-image: url("pic/p3.jpg");
+    position: relative;
+}
+
+/* 每一ABC大區塊的背景圖設定值 */
+.background_pic{
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+    padding-top: 50vh;
+    
+    /* 視差: 把圖片釘在網頁上 */
+    background-attachment: fixed;
+}
+
+/* 左上LOGO圖示 */
+#avator1{
+    width: 130px;
+    height: 130px;    
+    position: absolute;
+    top: 30px;
+    left: calc(10% + 30px);
+ 
+        
+    /* 變成圓形物件 */
+    border-radius: 80px;
+
+    border:4px solid grey;
+    background-image: url("pic/dog_logo.jpg");
+    background-size: 130px;
+    position: fixed;
+    z-index: 999999;
+
+
+    /* 圖片陰影效果 */
+    box-shadow: 5px 5px 5px #201d1d5b
+
+
+}
+/* 右上角導覽按鈕列 */
+#btn_bar{
+    position: absolute;
+    top: 95px;
+    position: fixed;
+    right: calc(10% + 20px);
+    z-index: 999999;
+}
+
+/* 導覽按鈕小區塊 */
+.btn_s{
+    padding: 0 15px;
+    background-color: rgba(255, 255, 255, 0.5);  
+    float: left;
+    margin-right: 15px;
+
+}
+
+
+.black_box{
+    width: 100%;
+    padding: calc(25vh - 25px)  0;  
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* 下面中間的按鈕樣式 */
+.btn_style{
+    width: 250px;
+    height: 50px;
+    background-color: rgb(226, 218, 183);
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+
+}
+
+/* hover效果 */
+.btn_style:hover {
+	border-radius: 25px;
+	transition: all 0.5s linear; 
+    background-color: blueviolet;
+    
+}
+</style>
+
+
+</head>
+<body>
+<div id="all">
+    <div id="boxA" class="background_pic">
+        <div id="avator1"></div>
+        <div id="btn_bar">
+            <a href="#boxA"><div id="b1" class="btn_s">A</div></a>
+            <a href="#boxB"><div id="b2" class="btn_s">B</div></a>
+            <a href="#boxC"><div id="b3" class="btn_s">C</div></a>
+
+        </div>
+        
+        <div id="boxAA" class="black_box">            
+            <div id="btn" class="btn_style"></div>
+        </div>
+    </div>
+    <div id="boxB" class="background_pic">
+        <div id="boxBB" class="black_box">            
+            <div id="btnB" class="btn_style"></div>
+        </div>
+    </div>
+    <div id="boxC" class="background_pic">
+        <div id="boxCC" class="black_box">
+            <div id="btnC" class="btn_style"></div>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>

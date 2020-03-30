@@ -1,0 +1,67 @@
+        body{
+            background-color: rgb(3, 88, 94);
+        }
+
+        #all{
+            width: 100%;
+            /* background-color: crimson; */
+            margin: 0 auto;
+            position: relative;           
+        }
+        
+        #pic1{
+            background-image: url("pic/p1.jpg");            
+        }
+       
+        #pic2{
+            background-image: url("pic/p2.jpg");            
+        }
+
+        #pic3{
+            background-image: url("pic/p3.jpg");
+
+        }
+        
+        .box_pic{            
+            width: 100%;
+            height: 50vh; 
+            background-size: cover;
+            background-position: center;
+            float: left;
+        }
+        .pic_s{            
+            width: 100%;
+            height: 50vh; 
+            background-size: cover;
+            background-position: center;
+            float: left;
+        }
+
+
+        .box_out{
+            width: 100%;
+            height: 100%;         
+            line-height: 500px;
+            background-color: rgba(0, 0, 0, 0.5);       
+            transition: opacity 1s;      
+
+        }
+        .box_s{
+            width: 100%;
+            height: 100%;         
+            line-height: 500px;
+            background-color: rgba(0, 0, 0, 0.5);       
+            transition: opacity 1s;      
+
+        }
+        .clear_fix{
+            clear: both;
+        }
+
+
+        .box_out:hover {  
+            opacity: 0;
+        }
+        .box_s:hover {  
+            opacity: 0;
+        }

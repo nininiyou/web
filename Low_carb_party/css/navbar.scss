@@ -1,0 +1,21 @@
+.nav {
+    .scroll-link {
+      &:after {
+        content: "\00a0";
+        display: block;
+        height: 1px;
+        width: 100%;
+        position: relative;
+        top: 3px;
+        background: transparent;
+        transition: top 0.3s ease-out;
+        -webkit-transition: top 0.3s ease-out;
+      }
+  
+      &:hover:after {
+        top: 7px;
+        background: #3c3c3c;
+        text-decoration: none;
+      }
+    }
+  }

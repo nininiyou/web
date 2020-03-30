@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+ <style>
+ body{
+        margin: 0;
+        background-color: rgb(98, 221, 230);
+        
+    }
+      
+  
+    .container{
+        /* padding-top: 10%; */
+        width: 80%;
+        display: flex;                  
+        flex-direction: column;
+        margin: 1% auto;  
+
+    }
+    .date{
+        width: 100%;
+        margin: 0 1%;
+        font-size: 20px;
+        font-weight: 600;
+        
+    }
+    /* 放卡片的區塊 */
+    .card{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+   
+    }
+
+    /* 每一張卡片的尺寸內容 */
+    .card-box{
+        width: 18%;
+        background-color: white;        
+        /* border: black 1px solid; */
+        border-radius: 10px;      
+        margin: 1% 1%;     
+    }
+
+    .card-img{
+        width: 70%;
+        height: 30%;      
+    
+        margin: 10px auto;
+    }
+   
+    .card-cont{
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        margin-bottom: 20px;
+
+    }
+
+    h1, h2, span, .text{
+        display: flex;
+        justify-content: center;
+        margin-top: 8px;
+    }
+   
+    
+ 
+ </style>
+
+    
+</head>
+<body>
+    <div class="container">
+        <div class="date"></div>
+        <div class="card">
+            <!-- <div class="card-img">
+                <img width="95%" src="./img/sunnyday.jpg" alt="">
+            </div>
+            <div class="card-cont">
+                <h1>嘉義縣</h1>
+                <h2>天氣現象</h2>
+                    <div>
+                        <span>最高溫</span>
+                        <span>最低溫</span>
+                    </div>
+                    <div class="text">很冷</div>
+            </div> -->
+        </div>
+       
+    </div>
+
+    
+
+
+
+    <script>
+        fetch('https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-9C06CAC2-2956-45E2-A0C7-8C0F12554214')
+            .then(function (response) {
+                return response.json();
+            })
+            //將APU資料經過驗證, 確認請求有回應 
+
+            .then(function (weather_array) {
+                // console.log(weather_array);
+
+                var locations = weather_array.records.location
+                console.log(locations)
+
+
+                locations.forEach(location => {
+
+                    var location_name = location.locationName
+                    var Wx = location.weatherElement[0].time[0].parameter.parameterName
+                    var MinT = location.weatherElement[2].time[0].parameter.parameterName
+                    var MaxT = location.weatherElement[4].time[0].parameter.parameterName
+                    var CI = location.weatherElement[3].time[0].parameter.parameterName
+                    var TUnit = location.weatherElement[4].time[0].parameter.parameterUnit
+                    var Wx_code = location.weatherElement[0].time[0].parameter.parameterValue
+                    // console.log(Wx_code)
+
+               
+
+            if(Wx_code == '1'){
+                var weather_icon = './img/sunnyday.jpg'
+            }
+            else if (Wx_code == '2' || Wx_code == '3' || Wx_code == '4'){
+                var weather_icon = './img/sunnycloudy.jpg'
+            } 
+            else if (Wx_code == '5' || Wx_code == '6' || Wx_code == '7'){
+                var weather_icon = './img/cloudy.jpg'
+            }
+            else {
+                var weather_icon = './img/rainning.jpg'
+
+            }
+      
+            var cards = document.querySelector('.card')
+            // console.log(cards)
+
+            cards.innerHTML += 
+            `         
+            <div class="card-box">
+                <div class="card-img">
+                    <img width="95%" src="${weather_icon}" alt="">
+                </div>
+                <div class="card-cont">
+                    <h1>${location_name}</h1>
+                    <h2>${Wx}</h2>
+                        <div>
+                            <span>最高溫：${MaxT}度${TUnit}</span>
+                            <span>最低溫：${MinT}度${TUnit}</span>
+                        </div>
+                        <div class="text">${CI}</div>
+                </div>
+            </div>            
+             `
+             });
+
+             var today = new Date();
+             var current_date = '西元 ' + today.getFullYear() + '年' +(today.getMonth() + 1) + '月' + today.getDate() + '日 ';
+             var current_time = today.getHours() +'時'　+ today.getMinutes() + '分';
+
+             var time = document.querySelector('.date');
+             time.innerHTML += '現在時間：' + current_date + current_time
+
+
+            })       
+
+
+    </script>
+
+
+</body>
+</html>

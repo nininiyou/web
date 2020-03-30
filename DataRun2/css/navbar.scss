@@ -1,0 +1,117 @@
+$gray: #eee;
+$white: #fff;
+$black: #333;
+$active: #e74c3c;
+$green: #66d6c5;
+$yellow: #f4de7f;
+$slight-yellow: cornsilk;
+$strong-yellow: #fcbc49;
+$slight-gray: #f8f8f8;
+
+.navbar {
+  height: 80px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  z-index: 100;
+  transition: background-color 1s ease 0s;
+}
+
+
+.navbar-default {
+  
+   .navbar-brand {
+     margin-top: 10px;
+     color: white;
+        
+      &:hover {
+         color: $black;
+         border: 1px solid $black;
+      } 
+   }
+   
+  .navbar-nav {
+    
+    > li {
+      
+      > a {
+        color: white;
+        margin: 10px 5px 5px 5px;
+        
+      }
+      > a:hover, > a:active, > a:focus {
+        color: $black;
+        border: 1px solid $black;
+      }
+      > a:visited {
+        color: $black;
+        text-decoration: none;
+      }
+
+    } //end li
+
+    > .active {
+
+      > a, > a:hover, > a:focus {
+        background-color: transparent;
+        color: $black;
+      }
+
+    }
+
+  } 
+  // end navbar-nav
+
+  //Collapsed styles
+  .navbar-toggle {
+    border-color: $black;
+
+      &:hover, &:focus {
+        background-color: $yellow;
+      }
+
+
+
+      .icon-bar {
+        color: $black;
+        background-color: $black;
+
+      }
+  }
+
+  .navbar-collapse.collapse.in ul {
+    background-color: $yellow;
+  }
+    
+} //end .navbar-default
+
+
+
+/* Solid class attached on scroll past first section */
+
+.navbar.solid {
+  background-color: $yellow;
+  transition: background-color 1s ease 0s;
+  box-shadow: 0 0 4px grey;
+
+    .navbar-brand {
+      color: $black;
+      transition: color 1s ease 0s;
+    }
+
+    .navbar-nav {
+
+       > li {
+
+          > a {
+            color: $black;
+            transition: color 1s ease 0s;
+          }
+
+       } //end li
+
+    } //end navbar-nav
+
+}
+
+
