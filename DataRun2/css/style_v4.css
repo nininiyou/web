@@ -234,7 +234,7 @@ body strong {
   }
 }
 
-@media (max-width: 8px) {
+@media (max-width: 7688px) {
   .banner .wrapper .running-button {
     position: absolute;
     left: 33%;
@@ -244,7 +244,7 @@ body strong {
 @media (max-width: 576px) {
   .banner .wrapper .running-button {
     position: absolute;
-    left: 33%;
+    left: 30%;
   }
 }
 
