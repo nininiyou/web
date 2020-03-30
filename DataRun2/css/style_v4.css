@@ -1384,7 +1384,11 @@ li.layer:nth-child(12) a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-bottom: 15px;
+  padding: 30px 15px;
+}
+
+.last-info .footer-box .footer-social i {
+  font-size: 3rem;
 }
 
 .last-info .footer-box .contact-box {
@@ -1411,6 +1415,7 @@ li.layer:nth-child(12) a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  font-size: 0.5rem;
 }
 
 .last-info .footer-box .contact-box .contact-li i {

@@ -1276,12 +1276,21 @@ li.layer:nth-child(12) a {
 // Footer
 
 .footer-box {
+  
   .footer-social {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding-bottom: 15px;
+    padding: 30px 15px;
+    i{
+      font-size: 3rem;
+    }
   }
+
+  // .social-icon{
+  //   margin-bottom: 15px;
+  // }
+
   .contact-box {
     display: flex;
     flex-direction: row;
@@ -1290,6 +1299,7 @@ li.layer:nth-child(12) a {
       display: flex;
       flex-direction: row;
       align-items: center;
+      font-size: 0.5rem;
 
       i {
         width: 25px;
