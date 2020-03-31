@@ -1295,7 +1295,7 @@ li.layer:nth-child(12) a {
 .last-info .row .slogan h2 {
   font-weight: 600;
   position: absolute;
-  top: -12vmax;
+  top: -10vmax;
   left: 5vmax;
   padding: 0;
   margin: 0;
